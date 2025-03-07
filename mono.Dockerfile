@@ -26,10 +26,10 @@ ARG RELEASE_NAME="stable"
 # e.g. SUBDIR "/beta3"
 # Use an empty string "" when the RELEASE_NAME is "stable"
 ARG SUBDIR=""
-ARG ZIP_GODOT_PLATFORM="linux_headless_64"
-ARG FILENAME_GODOT_PLATFORM="linux_headless.64"
+ARG ZIP_GODOT_PLATFORM="linux_x86_64"
+ARG FILENAME_GODOT_PLATFORM="linux_x86_64"
 
-RUN wget https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-${RELEASE_NAME}/Godot_v${GODOT_VERSION}-${RELEASE_NAME}_mono_${GODOT_ZIP_PLATFORM}.zip \
+RUN wget https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-${RELEASE_NAME}/Godot_v${GODOT_VERSION}-${RELEASE_NAME}_mono_${ZIP_GODOT_PLATFORM}.zip \
     && wget https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-${RELEASE_NAME}/Godot_v${GODOT_VERSION}-${RELEASE_NAME}_mono_export_templates.tpz
 
 RUN mkdir ~/.cache \
